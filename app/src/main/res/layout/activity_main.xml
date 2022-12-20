@@ -34,7 +34,18 @@
         android:layout_margin="40dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
-        android:text="Manual"
+        android:text="Json Test"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/manualForm" />
+
+    <Button
+        android:id="@+id/Test"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:text="Test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jsonTest" />
 </androidx.constraintlayout.widget.ConstraintLayout>

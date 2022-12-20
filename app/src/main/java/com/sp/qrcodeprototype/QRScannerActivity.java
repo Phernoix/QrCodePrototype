@@ -26,11 +26,11 @@ public class QRScannerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qrscan);
 
-        btScan= findViewById(R.id.bt_scan);
+        btScan = findViewById(R.id.bt_scan);
 
-        btScan.setOnClickListener(new View.OnClickListener(){
+        btScan.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
                 IntentIntegrator intentIntegrator = new IntentIntegrator(
                         QRScannerActivity.this
                 );
@@ -48,15 +48,15 @@ public class QRScannerActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        IntentResult intentResult= IntentIntegrator.parseActivityResult(
-                requestCode,resultCode,data
+        IntentResult intentResult = IntentIntegrator.parseActivityResult(
+                requestCode, resultCode, data
         );
 
-        if(intentResult.getContents() != null){
+        if (intentResult.getContents() != null) {
             AlertDialog.Builder builder = new AlertDialog.Builder(
                     QRScannerActivity.this
             );
-            builder.setTitle("Result");
+            /*builder.setTitle("Result");
             builder.setMessage(intentResult.getContents());
             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 @Override
@@ -64,10 +64,15 @@ public class QRScannerActivity extends AppCompatActivity {
                     dialogInterface.dismiss();
                 }
             });
-            builder.show();
-        }else{
+            builder.show();*/
+            String value = intentResult.getContents();
+            Intent i = new Intent(QRScannerActivity.this, TestForJson.class);
+            i.putExtra("Json_Data",value);
+            startActivity(i);
+
+        } else {
             Toast.makeText(getApplicationContext(),
-                    "You did not scan anything",Toast.LENGTH_SHORT)
+                    "You did not scan anything", Toast.LENGTH_SHORT)
                     .show();
         }
     }
