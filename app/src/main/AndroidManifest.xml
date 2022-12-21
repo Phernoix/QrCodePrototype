@@ -17,9 +17,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QrCodePrototype">
         <activity
-            android:name=".TestForJson"
-            android:exported="false" />
-        <activity
             android:name=".JsonTestActivity"
             android:exported="false" />
         <activity

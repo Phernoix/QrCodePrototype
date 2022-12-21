@@ -66,7 +66,7 @@ public class QRScannerActivity extends AppCompatActivity {
             });
             builder.show();*/
             String value = intentResult.getContents();
-            Intent i = new Intent(QRScannerActivity.this, TestForJson.class);
+            Intent i = new Intent(QRScannerActivity.this, FormActivity.class);
             i.putExtra("Json_Data",value);
             startActivity(i);
 
