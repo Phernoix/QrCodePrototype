@@ -9,7 +9,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp">
 
         <TextView
             android:id="@+id/textCustomerName"
@@ -24,7 +27,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:padding="4dp"/>
+            />
         <TextView
             android:id="@+id/textAddress"
             android:layout_width="match_parent"
@@ -38,7 +41,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:padding="4dp"/>
+            />
         <TextView
             android:id="@+id/textLocation"
             android:layout_width="match_parent"
@@ -51,7 +54,87 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="number"
+            />
+
+        <TextView
+            android:id="@+id/textGenWaste"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="General Waste (KG)"
             android:padding="4dp"/>
+
+        <EditText
+            android:id="@+id/editTextGenWaste"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            />
+
+        <TextView
+            android:id="@+id/textPaper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paper (KG)"
+            android:padding="4dp"/>
+
+        <EditText
+            android:id="@+id/editTextPaper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            />
+
+        <TextView
+            android:id="@+id/textMetal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Metal (KG)"
+            android:padding="4dp"/>
+
+        <EditText
+            android:id="@+id/editTextMetal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            />
+
+        <TextView
+            android:id="@+id/textPlastic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Plastic (KG)"
+            android:padding="4dp"/>
+
+        <EditText
+            android:id="@+id/editTextPlastic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            />
+        <TextView
+            android:id="@+id/textGlass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Glass (KG)"
+            android:padding="4dp"/>
+
+        <EditText
+            android:id="@+id/editTextGlass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number" />
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
